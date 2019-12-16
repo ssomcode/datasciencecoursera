@@ -31,4 +31,5 @@ data_frame_new=data.frame(emp_id=c(6:8),
 final_frame=rbind(data_frame,data_frame_new)
 print(final_frame)
 
-
+print(nrow(final_frame))
+print(ncol(final_frame))
