@@ -1,15 +1,16 @@
-library(datasets)
+missing=is.na(airquality$Ozone)
+as.numeric(missing)
+sum(missing)
 
-head(iris)  #this is iris dataset
+ozone=na.omit(airquality$Ozone)
+as.numeric(ozone)
+mean(ozone)
 
-?plot       #help for plot function
+ozone=airquality[airquality$Ozone > 31, ,drop=FALSE]
+ozone90=ozone[airquality$Temp > 90, , drop=FALSE]
+ozone901=na.omit(ozone90)
+mean(ozone901$Solar.R)
 
-plot(iris$Species)  #plotting species column from iris
-
-plot(iris$Sepal.Length)
-
-plot(iris$Species,iris$Sepal.Length)
-
-plot(iris$Petal.Length,iris$Petal.Width)
-
-plot(iris)
+data.may=airquality[airquality$Month==5,,drop=FALSE]
+data.may1=na.omit(data.may)
+max(data.may1)
