@@ -1,0 +1,6 @@
+library(datasets)
+head(iris)
+p_load(psych)
+p_help(psych,web = F)
+describe(iris$Petal.Length)
+describe(iris)
